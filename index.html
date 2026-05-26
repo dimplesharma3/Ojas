@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ojas Organics — Premium cold-pressed organic botanical body oils. Handcrafted Ayurvedic formulas for your daily Abhyangam ritual.">
+  <meta name="keywords" content="organic body oil, cold-pressed, ayurveda, dry skin oil, sesame oil, brahmi, luxury body care, ojas organics">
+  <meta name="author" content="Ojas Organics">
+  
+  <title>Ojas Organics | Cold-Pressed Botanical Body Oils</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%232C1203%22>♢</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
+        <a href="#catalog" class="nav-link">Collection</a>
+        <a href="#elixir" class="nav-link">Brahmi Elixir</a>
+      </nav>
+
+      <a href="#hero" class="brand-logo" id="brand-logo" style="display: flex; align-items: center; gap: 0;">
+        <img src="assets/images/ojas_logo.png" alt="Ojas Organics" style="height: 38px; width: auto; object-fit: contain;">
+      </a>
+
+      <div class="nav-actions">
+        <button class="btn-premium" onclick="openQuiz()" id="nav-quiz-trigger" style="padding: 10px 22px; font-size: 9px;">
+          Skin Finder
+        </button>
+        <button class="cart-icon-btn" onclick="toggleCartDrawer()" id="cart-drawer-trigger" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-image">
+      <img src="assets/images/hero_lifestyle.png" alt="Ojas Lifestyle">
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text-pane reveal active">
+        <div style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+          <img src="assets/images/ojas_logo.png" alt="Ojas" style="height: 28px; width: auto; filter: invert(1);">
+          <span style="font-family: var(--font-sans); font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: var(--ls-widest); color: var(--color-cream);">Rituals</span>
+        </div>
+        
+        <h1 class="hero-title" style="color: var(--color-cream);">Restorative<br><span>Body</span> Oils.</h1>
+        <p class="hero-desc" style="color: var(--color-cream); opacity: 0.9;">Cold-pressed botanical nectars for your daily Abhyangam self-massage ritual.</p>
+        <div class="hero-actions">
+          <a href="#catalog" class="btn-premium" style="border-color: var(--color-cream); color: var(--color-cream);">Shop Collection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy-section" id="philosophy">
+    <div class="container">
+      <div class="philosophy-header reveal">
+        <span class="section-subtitle">The Vitality of Ojas</span>
+        <h2>Ancient Wisdom, Modern Ritual</h2>
+        <p>In Ayurveda, <strong>Ojas</strong> is the essence of vitality. Our oils are crafted to restore this balance.</p>
+      </div>
+
+      <div class="philosophy-pillars reveal">
+        <div class="pillar-card">
+          <div class="pillar-img-wrap">
+            <img src="assets/images/abhyanga_massage.png" alt="Abhyangam Body Massage">
+          </div>
+          <h4 class="pillar-title">Abhyangam</h4>
+          <p class="pillar-desc">Warm self-massage rituals to soothe nerves.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-img-wrap">
+            <img src="assets/images/gandusha_smile.png" alt="Gandusha Smile with Teeth">
+          </div>
+          <h4 class="pillar-title">Gandusha</h4>
+          <p class="pillar-desc">Morning oil-pulling to purify and strengthen.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-img-wrap">
+            <img src="assets/images/pure_ojas_drop.png" alt="Pure Ojas Oil Drop">
+          </div>
+          <h4 class="pillar-title">Pure Ojas</h4>
+          <p class="pillar-desc">Raw cellular enzymes to build skin radiance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATALOG -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">The Collection</span>
+        <h2 class="section-title">Body Oils & Elixirs</h2>
+        <div class="premium-divider"></div>
+      </div>
+
+      <div class="filter-container reveal">
+        <button class="filter-btn active" data-filter="all" id="btn-filter-all">All Oils</button>
+        <button class="filter-btn" data-filter="restorative" id="btn-filter-restorative">Restorative</button>
+        <button class="filter-btn" data-filter="warming" id="btn-filter-warming">Warming</button>
+        <button class="filter-btn" data-filter="cooling" id="btn-filter-cooling">Cooling</button>
+        <button class="filter-btn" data-filter="soothing" id="btn-filter-soothing">Soothing</button>
+        <button class="filter-btn" data-filter="gandusha" id="btn-filter-gandusha">Gandusha</button>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- GANDUSHA ELIXIR DEEP DIVE -->
+  <section class="hero-product-deep-dive" id="elixir">
+    <div class="container">
+      <div class="hero-product-grid">
+        <div class="hero-product-visual reveal reveal-left">
+          <span class="hero-product-badge">Daily Oral Detox</span>
+          <img src="assets/images/bottle_gandusha.png" alt="Gandusha Sesame Oral Elixir in amber glass pump bottle">
+        </div>
+        <div class="hero-product-info reveal reveal-right">
+          <div style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+            <img src="assets/images/ojas_logo.png" alt="Ojas" style="height: 26px; width: auto;">
+            <span class="section-subtitle" style="margin-bottom: 0;">Oral Elixir</span>
+          </div>
+          
+          <h2 class="hero-product-title" style="font-weight: 300;">Gandusha Premium<br>Sesame Oral Elixir</h2>
+          <div class="hero-product-subtitle">200ml / 6.7 fl. oz • Cold-Pressed</div>
+          
+          <p style="color: var(--color-bark-soft); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+            Our premier unrefined organic sesame oil, slow-pressed and cured specifically for daily Gandusha (oil pulling). Draws out oral impurities and strengthens gum tissue.
+          </p>
+
+          <div class="hero-product-benefits">
+            <div class="benefit-item">
+              <span class="benefit-check">◆</span>
+              <div class="benefit-text">
+                <h4>Oral Detoxification</h4>
+                <p>Purifies and clarifies cellular channels.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-check">◆</span>
+              <div class="benefit-text">
+                <h4>Gum Strength</h4>
+                <p>Balances saliva and fortifies oral tissues.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-product-ingredients" style="border-color: var(--color-border-light);">
+            <div class="ingredient-badge">
+              <span>Pure Sesame</span>
+              <label>Deep pull</label>
+            </div>
+            <div class="ingredient-badge">
+              <span>Calcium Rich</span>
+              <label>Fortifying</label>
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-lg); border-bottom: 1px solid var(--color-border-light); padding-bottom: var(--spacing-sm);">
+            <span class="hero-volume-label" style="font-family: var(--font-sans); font-size: 8.5px; font-weight: 500; text-transform: uppercase; color: var(--color-warm-gray); letter-spacing: var(--ls-widest);">Volume: 200ml</span>
+            <div class="product-size-selector" style="display: flex; gap: 4px;">
+              <button class="size-btn active" data-size="200ml" onclick="selectHeroSize(event, '200ml')">200ml</button>
+              <button class="size-btn" data-size="500ml" onclick="selectHeroSize(event, '500ml')">500ml</button>
+            </div>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="hero-product-actions">
+            <div class="hero-product-price" id="hero-price-display">$45.00</div>
+            <button class="btn-premium btn-filled" id="btn-hero-add-to-cart" onclick="addToCart('gandusha-sesame', '200ml')" style="flex-grow: 1;">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKIN FINDER BANNER -->
+  <section class="skin-finder-section">
+    <div class="container reveal">
+      <div class="skin-finder-banner">
+        <div style="display: flex; justify-content: center; margin-bottom: var(--spacing-md);">
+          <img src="assets/images/ojas_logo.png" alt="Ojas Organics" style="height: 36px; width: auto;">
+        </div>
+        <h3>Find Your Dosha Match</h3>
+        <p>Take our 60-second skin quiz to discover your perfect body oil.</p>
+        <button class="btn-premium" onclick="openQuiz()" id="banner-quiz-trigger">
+          Take the Quiz
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: var(--spacing-md);">
+            <img src="assets/images/ojas_logo.png" alt="Ojas Organics" style="height: 40px; width: auto;">
+          </div>
+          <p>Premium cold-pressed botanical body oils crafted for your daily Ayurvedic self-care rituals.</p>
+        </div>
+        <div class="footer-links-col">
+          <h5>Rituals</h5>
+          <div class="footer-links">
+            <a href="#hero" class="footer-link">Home</a>
+            <a href="#philosophy" class="footer-link">Philosophy</a>
+            <a href="#catalog" class="footer-link">Collection</a>
+            <a href="#elixir" class="footer-link">Brahmi Elixir</a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h5>Learn</h5>
+          <div class="footer-links">
+            <a href="#philosophy" class="footer-link">Abhyangam Massage</a>
+            <a href="#catalog" class="footer-link">Cold-Press Process</a>
+            <a href="#" class="footer-link">Ethical Sourcing</a>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h5>Stay Connected</h5>
+          <p>Receive Ayurvedic self-care guidance and new product releases.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Welcome to Ojas Organics.'); this.reset();">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required aria-label="Email address">
+            <button type="submit" class="newsletter-submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 OJAS Organics. Handcrafted in California.</span>
+        <div class="ayurvedic-disclosure">
+          *These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="backdrop-overlay" id="cart-backdrop" onclick="closeCartDrawer()"></div>
+  <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-header">
+      <h3 id="cart-title">Your Cart</h3>
+      <button class="btn-close-cart" onclick="closeCartDrawer()" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Injected by js/cart.js -->
+    </div>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-totals-row">
+        <label>Items</label>
+        <span class="cart-count">0</span>
+      </div>
+      <div class="cart-totals-row">
+        <label>Shipping</label>
+        <span>Complimentary</span>
+      </div>
+      <div class="cart-totals-row total-row">
+        <label>Total</label>
+        <span id="cart-total-val">$0.00</span>
+      </div>
+      <button class="btn-checkout" id="btn-checkout" onclick="simulateCheckout()">
+        Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- QUIZ MODAL -->
+  <div class="quiz-modal" id="quiz-modal" role="dialog" aria-modal="true">
+    <div class="quiz-container" id="quiz-container">
+      <button class="btn-close-quiz" onclick="closeQuiz()" aria-label="Close quiz">✕</button>
+      
+      <div class="quiz-header">
+        <h3 class="quiz-title">Skin Finder</h3>
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress" id="quiz-progress"></div>
+        </div>
+      </div>
+
+      <div class="quiz-body" id="quiz-body">
+        <!-- Rendered dynamically by js/quiz.js -->
+      </div>
+
+      <div class="quiz-footer">
+        <button class="btn-link" id="quiz-prev-btn" onclick="prevQuizSlide()">← Previous</button>
+        <button class="btn-premium" id="quiz-next-btn" onclick="nextQuizSlide()">Next Question</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/cart.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

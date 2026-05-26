@@ -1,0 +1,206 @@
+/* Global Styles & Resets - Ojas Organics */
+/* Redesigned: Warm Organic Luxury */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-bark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Warm Selection */
+::selection {
+  background-color: var(--color-tan);
+  color: var(--color-bark);
+}
+
+/* Premium Warm Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-gray);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bark);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-bark);
+}
+
+p {
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--color-bark-soft);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+/* Premium Divider */
+.premium-divider {
+  width: 45px;
+  height: 1px;
+  background: var(--color-amber);
+  margin: var(--spacing-md) auto;
+}
+
+/* Primary Button — Bark Brown with fill hover */
+.btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  border: 1px solid var(--color-bark);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--color-bark);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: var(--transition-medium);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bark);
+  z-index: -1;
+  transform: translateY(100%);
+  transition: var(--transition-medium);
+}
+
+.btn-premium:hover {
+  color: var(--color-cream);
+  border-color: var(--color-bark);
+}
+
+.btn-premium:hover::before {
+  transform: translateY(0);
+}
+
+/* Filled variant */
+.btn-premium.btn-filled {
+  background-color: var(--color-bark);
+  color: var(--color-cream);
+}
+
+.btn-premium.btn-filled::before {
+  background-color: transparent;
+}
+
+.btn-premium.btn-filled:hover {
+  background-color: transparent;
+  color: var(--color-bark);
+}
+
+/* Gold variant (kept for cart.js/quiz.js compatibility) */
+.btn-premium.btn-gold {
+  border-color: var(--color-bark);
+  color: var(--color-bark);
+  background-color: transparent;
+}
+
+.btn-premium.btn-gold::before {
+  background-color: var(--color-bark);
+}
+
+.btn-premium.btn-gold:hover {
+  color: var(--color-cream);
+}
+
+/* Link Button */
+.btn-link {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-bark);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--color-bark);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: var(--transition-fast);
+}
+
+.btn-link:hover {
+  color: var(--color-sage);
+  border-bottom-color: var(--color-sage);
+  gap: var(--spacing-md);
+}
